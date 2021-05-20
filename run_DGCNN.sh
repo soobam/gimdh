@@ -13,7 +13,7 @@ CONV_SIZE="32-32-32-1"
 sortpooling_k=0.6  # If k <= 1, then k is set to an integer so that k% of graphs have nodes less than this integer
 FP_LEN=0  # final dense layer's input dimension, decided by data
 n_hidden=128  # final dense layer's hidden size
-bsize=1  # batch size, set to 50 or 100 to accelerate training
+bsize=10  # batch size, set to 50 or 100 to accelerate training
 dropout=True
 
 # dataset-specific settings
@@ -47,8 +47,8 @@ PROTEINS)
   learning_rate=0.00001
   ;;
 COLLAB)
-  num_epochs=300
-  learning_rate=0.0001
+  num_epochs=3000
+  learning_rate=0.0005
   sortpooling_k=0.9
   ;;
 IMDBBINARY)
